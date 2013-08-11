@@ -3,7 +3,11 @@ require 'weather'
 class WeatherParser
 
   def parse_line(line)
-    Weather.new("1",59, 88)
+    parts = line.split(' ')
+    area = parts[0]
+    max = parts[1]
+    min = parts[2]
+    Weather.new(area, min.to_i, max.to_i)
 
   end
 end
