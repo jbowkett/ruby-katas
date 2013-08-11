@@ -8,6 +8,5 @@ class WeatherParser
     max = parts[1]
     min = parts[2]
     Weather.new(area, min.to_i, max.to_i)
-
   end
 end
